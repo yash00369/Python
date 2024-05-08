@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        th,td{
+
+            border:1px solid black;
+
+        }
+
+            
+        
+    </style>
+</head>
+<body>
+    <h1>Student Page</h1>
+    {% if stu %}
+      <h1>Show Data</h1>
+      <table>
+        <tr>
+            <td>ID</td>
+            <td>Stuid</td>
+            <td>StuName</td>
+            <td>StuEmail</td>
+            <td>Password</td>
+        </tr>
+        {% for st in stu %}
+        <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.Stuid}}</td>
+            <td>{{st.StuName}}</td>
+            <td>{{st.StuEmail}}</td>
+            <td>{{st.Password}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+        <h1>No Data</h1>
+    {% endif %}    
+    
+     
+    
+</body>
+</html>
