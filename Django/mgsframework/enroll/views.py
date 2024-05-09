@@ -15,4 +15,5 @@ def regi(request):
             fm = StudentRegistration()
     else:
         fm = StudentRegistration()
-    return render(request,'enroll/userregistration.html',{'form':fm})
+    return render(request,'enroll/userregistration.html',{'form':fm})    
+        
